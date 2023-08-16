@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package orderservice;
+
+option go_package = "gRPC-orders-test/proto/order_service";
+
+service OrderService {
+  rpc GetOrder(GetOrderRequest) returns (OrderResponse);
+  rpc GetAllOrders(GetAllOrdersRequest) returns (AllOrdersResponse);
+}
+
+message GetOrderRequest {
+  string user_id = 1;
+}
+
+message GetAllOrdersRequest {
+  string user_id = 1;
+}
+
+message OrderResponse {
+  string order_id = 1;
+}
+
+message AllOrdersResponse {
+  repeated string order_ids = 1;
+}
+
