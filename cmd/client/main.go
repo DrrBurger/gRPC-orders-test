@@ -33,5 +33,5 @@ func main() {
 		log.Fatalf("ошибка при получении всех order_ids: %v", err)
 	}
 	fmt.Printf("Все заказы для %s: %v\n", userID, allOrdersResponse.GetOrderIds())
-	
+
 }

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package orderservice;
+package order_service;
 
 option go_package = "gRPC-orders-test/proto/order_service";
 

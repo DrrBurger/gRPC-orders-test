@@ -17,7 +17,7 @@ type server struct {
 
 func (s *server) GetOrder(ctx context.Context, in *pb.GetOrderRequest) (*pb.OrderResponse, error) {
 	s.lastOrderID++
-	orderID := "order_" + strconv.Itoa(s.lastOrderID)
+	orderID := "order_№_" + strconv.Itoa(s.lastOrderID)
 	s.orders[in.UserId] = append(s.orders[in.UserId], orderID)
 	return &pb.OrderResponse{OrderId: orderID}, nil
 }
